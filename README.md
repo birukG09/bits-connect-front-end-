@@ -15,7 +15,6 @@ Bits Connect is a modern academic companion web app designed for university stud
 
 - **Frontend:** HTML, CSS, JavaScript 
 - **Styling:** CSS  
-- **API Communication:** Axios / Fetch  
 - **State Management:** 
 
 ## 🔧 Setup & Run
