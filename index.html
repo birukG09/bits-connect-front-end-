@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiTS Connect Educational Platform</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/pages.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="brand-logo">
+                    <span>B</span>
+                </div>
+                <span class="brand-text">BiTS Connect</span>
+            </div>
+
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active" data-page="home">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#library" class="nav-link" data-page="library">
+                    <i class="fas fa-book"></i>
+                    <span>Library</span>
+                </a>
+                <a href="#upload" class="nav-link" data-page="upload">
+                    <i class="fas fa-upload"></i>
+                    <span>Upload</span>
+                </a>
+                <a href="#gpa" class="nav-link" data-page="gpa">
+                    <i class="fas fa-calculator"></i>
+                    <span>GPA</span>
+                </a>
+                <a href="#chat" class="nav-link" data-page="chat">
+                    <i class="fas fa-comments"></i>
+                    <span>Chat</span>
+                </a>
+                <a href="#blog" class="nav-link" data-page="blog">
+                    <i class="fas fa-newspaper"></i>
+                    <span>Blog</span>
+                </a>
+                <a href="#dashboard" class="nav-link" data-page="dashboard">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </div>
+
+            <div class="nav-right">
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="user-menu" id="user-menu">
+                    <button class="login-btn" id="login-btn">Login</button>
+                    <div class="user-profile hidden" id="user-profile">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=default" alt="Profile" class="user-avatar">
+                        <span class="user-name">Student</span>
+                        <button class="logout-btn" id="logout-btn">
+                            <i class="fas fa-sign-out-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <button class="mobile-toggle" id="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Page -->
+        <section id="home-page" class="page active">
+            <div class="hero-section">
+                <div class="hero-background"></div>
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">BiTS Connect</h1>
+                        <p class="hero-subtitle">From collecting... to connecting...</p>
+                        <p class="hero-description">
+                            The future of educational collaboration. Upload, share, learn, and connect with students worldwide in our advanced learning ecosystem.
+                        </p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary" data-page="library">Explore Library</button>
+                            <button class="btn btn-secondary" data-page="upload">Upload Resources</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-section">
+                <div class="container">
+                    <div class="features-grid">
+                        <div class="feature-card" data-page="upload">
+                            <div class="feature-icon blue">
+                                <i class="fas fa-upload"></i>
+                            </div>
+                            <h3>Upload & Convert</h3>
+                            <p>Upload PDFs, EPUBs, or convert URLs to accessible formats</p>
+                        </div>
+                        <div class="feature-card" data-page="library">
+                            <div class="feature-icon green">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <h3>Digital Library</h3>
+                            <p>Access thousands of educational resources and materials</p>
+                        </div>
+                        <div class="feature-card" data-page="chat">
+                            <div class="feature-icon purple">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h3>Student Chat</h3>
+                            <p>Connect with peers in real-time chat rooms and groups</p>
+                        </div>
+                        <div class="feature-card" data-page="gpa">
+                            <div class="feature-icon orange">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <h3>GPA Calculator</h3>
+                            <p>Track your academic progress with advanced GPA tools</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-section">
+                <div class="container">
+                    <div class="glass-card">
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="stat-value">2,847</div>
+                                <div class="stat-label">Active Students</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-book-open"></i>
+                                </div>
+                                <div class="stat-value">15,392</div>
+                                <div class="stat-label">Resources Shared</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-comments"></i>
+                                </div>
+                                <div class="stat-value">428</div>
+                                <div class="stat-label">Study Groups</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="stat-value">94%</div>
+                                <div class="stat-label">Success Rate</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Library Page -->
+        <section id="library-page" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Digital Library</h1>
+                    <p>Discover thousands of educational resources shared by students and educators worldwide</p>
+                </div>
+
+                <div class="search-filters">
+                    <div class="glass-card">
+                        <div class="search-bar">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search resources..." id="library-search">
+                        </div>
+                        <select id="department-filter">
+                            <option value="all">All Departments</option>
+                            <option value="computer-science">Computer Science</option>
+                            <option value="mathematics">Mathematics</option>
+                            <option value="physics">Physics</option>
+                            <option value="chemistry">Chemistry</option>
+                            <option value="biology">Biology</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="category-filters">
+                    <button class="filter-btn active" data-category="all">
+                        <i class="fas fa-book-open"></i>
+                        All Resources
+                    </button>
+                    <button class="filter-btn" data-category="lectures">
+                        <i class="fas fa-file-text"></i>
+                        Lecture Notes
+                    </button>
+                    <button class="filter-btn" data-category="videos">
+                        <i class="fas fa-video"></i>
+                        Video Lectures
+                    </button>
+                    <button class="filter-btn" data-category="audio">
+                        <i class="fas fa-music"></i>
+                        Audio Books
+                    </button>
+                </div>
+
+                <div class="resources-grid" id="resources-grid">
+                    <!-- Resources will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Upload Page -->
+        <section id="upload-page" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Upload & Convert</h1>
+                    <p>Upload your files or convert web pages to PDFs. Support for PDF, EPUB, DOC, and more.</p>
+                </div>
+
+                <div class="upload-grid">
+                    <div class="glass-card">
+                        <h2><i class="fas fa-upload"></i> File Upload</h2>
+                        <div class="dropzone" id="dropzone">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Drag & drop files here, or click to select</p>
+                            <small>Supports PDF, EPUB, DOC, DOCX, TXT files</small>
+                            <input type="file" id="file-input" multiple accept=".pdf,.epub,.doc,.docx,.txt">
+                        </div>
+                    </div>
+
+                    <div class="glass-card">
+                        <h2><i class="fas fa-link"></i> URL to PDF</h2>
+                        <div class="url-converter">
+                            <input type="url" placeholder="https://example.com" id="url-input">
+                            <button class="btn btn-primary" id="convert-btn">Convert to PDF</button>
+                        </div>
+                        <div class="info-box">
+                            <i class="fas fa-info-circle"></i>
+                            <div>
+                                <strong>How it works:</strong>
+                                <p>Enter any web URL and we'll convert it to a PDF file for easy reading and sharing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="uploaded-files" id="uploaded-files">
+                    <!-- Uploaded files will be shown here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- GPA Calculator Page -->
+        <section id="gpa-page" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>GPA Calculator</h1>
+                    <p>Track your academic progress with our advanced GPA calculator and analytics</p>
+                </div>
+
+                <div class="gpa-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon green">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-value" id="cumulative-gpa">0.00</div>
+                        <div class="stat-label">Cumulative GPA</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon blue">
+                            <i class="fas fa-target"></i>
+                        </div>
+                        <div class="stat-value" id="current-gpa">0.00</div>
+                        <div class="stat-label">Current Semester</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon purple">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div class="stat-value" id="total-semesters">0</div>
+                        <div class="stat-label">Completed Semesters</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon orange">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="stat-value" id="total-courses">0</div>
+                        <div class="stat-label">Total Courses</div>
+                    </div>
+                </div>
+
+                <div class="gpa-calculator">
+                    <div class="glass-card">
+                        <div class="calculator-header">
+                            <h2>Current Semester</h2>
+                            <button class="btn btn-primary" id="add-course-btn">
+                                <i class="fas fa-plus"></i> Add Course
+                            </button>
+                        </div>
+                        <input type="text" placeholder="Semester name" id="semester-name" value="Fall 2024">
+                        <div class="courses-list" id="courses-list">
+                            <!-- Courses will be added here -->
+                        </div>
+                        <div class="semester-summary" id="semester-summary">
+                            <div class="summary-gpa">
+                                <span class="gpa-value">0.00</span>
+                                <span class="gpa-label">Semester GPA</span>
+                            </div>
+                            <button class="btn btn-primary" id="save-semester-btn">Save Semester</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chat Page -->
+        <section id="chat-page" class="page">
+            <div class="container">
+                <div class="chat-container">
+                    <div class="chat-sidebar">
+                        <div class="chat-header">
+                            <h2>Messages</h2>
+                            <button class="btn btn-icon">
+                                <i class="fas fa-user-plus"></i>
+                            </button>
+                        </div>
+                        <div class="chat-search">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search conversations..." id="chat-search">
+                        </div>
+                        <div class="chat-list" id="chat-list">
+                            <!-- Chat conversations will be populated here -->
+                        </div>
+                    </div>
+
+                    <div class="chat-main">
+                        <div class="chat-welcome" id="chat-welcome">
+                            <div class="welcome-content">
+                                <div class="welcome-icon">
+                                    <i class="fas fa-comments"></i>
+                                </div>
+                                <h2>Welcome to BiTS Chat</h2>
+                                <p>Select a conversation from the sidebar to start chatting with your classmates and study groups.</p>
+                            </div>
+                        </div>
+
+                        <div class="chat-window hidden" id="chat-window">
+                            <div class="chat-window-header">
+                                <div class="chat-info">
+                                    <img src="" alt="" class="chat-avatar">
+                                    <div class="chat-details">
+                                        <h3 class="chat-name"></h3>
+                                        <p class="chat-status"></p>
+                                    </div>
+                                </div>
+                                <div class="chat-actions">
+                                    <button class="btn btn-icon"><i class="fas fa-phone"></i></button>
+                                    <button class="btn btn-icon"><i class="fas fa-video"></i></button>
+                                    <button class="btn btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="chat-messages" id="chat-messages">
+                                <!-- Messages will be populated here -->
+                            </div>
+
+                            <div class="chat-input">
+                                <button class="btn btn-icon"><i class="fas fa-paperclip"></i></button>
+                                <input type="text" placeholder="Type a message..." id="message-input">
+                                <button class="btn btn-icon"><i class="fas fa-smile"></i></button>
+                                <button class="btn btn-primary" id="send-message-btn">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Page -->
+        <section id="blog-page" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Tech Blog</h1>
+                    <p>Stay updated with the latest trends, tutorials, and insights from the tech world</p>
+                </div>
+
+                <div class="blog-filters">
+                    <div class="glass-card">
+                        <div class="search-bar">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search articles..." id="blog-search">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-filters">
+                    <button class="filter-btn active" data-category="all">
+                        <i class="fas fa-globe"></i>
+                        All Articles
+                    </button>
+                    <button class="filter-btn" data-category="ai">
+                        <i class="fas fa-brain"></i>
+                        AI & ML
+                    </button>
+                    <button class="filter-btn" data-category="webdev">
+                        <i class="fas fa-code"></i>
+                        Web Dev
+                    </button>
+                    <button class="filter-btn" data-category="tools">
+                        <i class="fas fa-tools"></i>
+                        Dev Tools
+                    </button>
+                </div>
+
+                <div class="blog-grid" id="blog-grid">
+                    <!-- Blog posts will be populated here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Page -->
+        <section id="dashboard-page" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Welcome back, Student! 👋</h1>
+                    <p>Here's what's happening with your learning journey today.</p>
+                </div>
+
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon green">
+                            <i class="fas fa-target"></i>
+                        </div>
+                        <div class="stat-value">3.85</div>
+                        <div class="stat-label">Current GPA</div>
+                        <div class="stat-change positive">+0.12 this semester</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon blue">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-value">28.2</div>
+                        <div class="stat-label">Study Hours</div>
+                        <div class="stat-change">This week</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon purple">
+                            <i class="fas fa-file-text"></i>
+                        </div>
+                        <div class="stat-value">47</div>
+                        <div class="stat-label">Files Uploaded</div>
+                        <div class="stat-change">Total resources</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon orange">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="stat-value">12</div>
+                        <div class="stat-label">Study Streak</div>
+                        <div class="stat-change">Days in a row</div>
+                    </div>
+                </div>
+
+                <div class="dashboard-content">
+                    <div class="dashboard-main">
+                        <div class="glass-card">
+                            <h2>Study Hours This Week</h2>
+                            <div class="chart-placeholder">
+                                <i class="fas fa-chart-area"></i>
+                                <p>Study hours chart would be displayed here</p>
+                            </div>
+                        </div>
+
+                        <div class="glass-card">
+                            <div class="card-header">
+                                <h2>Recent Files</h2>
+                                <a href="#" class="view-all">View All</a>
+                            </div>
+                            <div class="recent-files" id="recent-files">
+                                <!-- Recent files will be populated here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-sidebar">
+                        <div class="glass-card">
+                            <h2>Study Distribution</h2>
+                            <div class="chart-placeholder">
+                                <i class="fas fa-chart-pie"></i>
+                                <p>Subject distribution chart</p>
+                            </div>
+                        </div>
+
+                        <div class="glass-card">
+                            <div class="card-header">
+                                <h2>Bookmarked</h2>
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="bookmarked-resources">
+                                <!-- Bookmarked resources will be populated here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="brand-logo">
+                    <span>B</span>
+                </div>
+                <h2 id="modal-title">Welcome Back</h2>
+                <p id="modal-subtitle">Sign in to your account to continue learning</p>
+            </div>
+
+            <form id="auth-form">
+                <div class="form-group hidden" id="name-group">
+                    <label>Full Name</label>
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="name-input" placeholder="Enter your full name">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email-input" placeholder="Enter your email" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password-input" placeholder="Enter your password" required>
+                        <button type="button" class="password-toggle" id="password-toggle">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group hidden" id="confirm-password-group">
+                    <label>Confirm Password</label>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="confirm-password-input" placeholder="Confirm your password">
+                    </div>
+                </div>
+
+                <div class="form-options" id="login-options">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full" id="auth-submit">
+                    <span id="auth-submit-text">Sign In</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+
+            <div class="modal-footer">
+                <p>
+                    <span id="toggle-text">Don't have an account?</span>
+                    <button type="button" id="auth-toggle" class="link-btn">Sign up</button>
+                </p>
+            </div>
+
+            <div class="demo-accounts">
+                <h3>Demo Accounts:</h3>
+                <p>Student: student@bits.edu</p>
+                <p>Admin: admin@bits.edu</p>
+                <small>Use any password</small>
+            </div>
+
+            <button class="modal-close" id="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/library.js"></script>
+    <script src="js/upload.js"></script>
+    <script src="js/gpa.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
